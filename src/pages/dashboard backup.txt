@@ -1,0 +1,109 @@
+// import {
+//   Box,
+//   Flex,
+//   Avatar,
+//   Heading,
+//   Text,
+//   Stat,
+//   StatLabel,
+//   StatNumber,
+//   IconButton,
+//   useColorModeValue,
+//   Image
+// } from '@chakra-ui/react';
+// import { ArrowForwardIcon } from '@chakra-ui/icons';
+// import { motion } from 'framer-motion';
+// import ThemedCard from '../components/common/ThemedCard';
+
+// const MotionBox = motion(Box);
+
+// export default function Dashboard() {
+//   const bg = useColorModeValue('gray.100', 'gray.900');
+//   const text = useColorModeValue('gray.900', 'whiteAlpha.900');
+//   const cardBg = useColorModeValue('white', 'gray.800');
+//   const subText = useColorModeValue('gray.600', 'gray.400');
+//   const linkColor = useColorModeValue('blue.600', 'blue.300');
+//   const boxBg = useColorModeValue('gray.100', 'blackAlpha.500');
+//   const conciergeTextColor = useColorModeValue('gray.600', 'whiteAlpha.800');
+
+//   return (
+//     <Box minH="100vh" bg={bg} color={text} p={8}>
+//       <Flex direction={{ base: 'column', md: 'row' }} gap={6}>
+//         {/* Welcome Card with background and avatar bubble */}
+//         <MotionBox
+//           as={ThemedCard}
+//           flex={{ base: '1 1 100%', md: '2' }}
+//           p={6}
+//           borderRadius="2xl"
+//           position="relative"
+//           overflow="hidden"
+//           bg={cardBg}
+//           backgroundImage="url('/jellyfish.png')"
+//           backgroundSize="cover"
+//           backgroundPosition="center"
+//           color={text}
+//           whileHover={{ scale: 1.02 }}
+//         >
+//           <Box position="relative" zIndex={1}>
+//             <Text fontSize="sm" mb={1} color={subText}>Welcome back,</Text>
+//             <Heading size="lg" mb={1}>Hulk</Heading>
+//             <Text fontSize="md" mb={4}>Glad to see you again!<br />Talk to me anytime, about anything</Text>
+
+//             <Flex align="center" gap={3}>
+//               <Avatar size="lg" name="Hulk" src="/avatar.png" bg="pink.200" />
+//               <Box>
+//                 <Text fontWeight="bold">Chat With Concierge →</Text>
+//                 <Text fontSize="xs" color={conciergeTextColor}>Over iMessage or Here</Text>
+//               </Box>
+//             </Flex>
+//           </Box>
+//         </MotionBox>
+
+//         {/* Survivorship Score Card */}
+//         <MotionBox
+//           as={ThemedCard}
+//           flex={{ base: '1 1 100%', md: '2' }}
+//           p={6}
+//           bg={cardBg}
+//           borderRadius="2xl"
+//           whileHover={{ scale: 1.02 }}
+//         >
+//           <Flex justify="space-between" align="center" mb={4}>
+//             <Heading size="md">Survivorship Score</Heading>
+//             <Text fontSize="sm" textDecoration="underline" color={linkColor} cursor="pointer">Go To Page</Text>
+//           </Flex>
+
+//           <Flex gap={4} align="center" justify="space-between">
+//             <Box>
+//               <Box bg={boxBg} p={4} borderRadius="lg" mb={3} display="flex" justifyContent="space-between" alignItems="center">
+//                 <Stat>
+//                   <StatLabel fontSize="xs">Biomarkers Analyzed</StatLabel>
+//                   <StatNumber fontSize="2xl">134</StatNumber>
+//                 </Stat>
+//                 <IconButton
+//                   icon={<ArrowForwardIcon />} aria-label="Biomarkers"
+//                   variant="ghost" colorScheme="teal" size="sm"
+//                 />
+//               </Box>
+//               <Box bg={boxBg} p={4} borderRadius="lg" display="flex" justifyContent="space-between" alignItems="center">
+//                 <Stat>
+//                   <StatLabel fontSize="xs">Next Steps</StatLabel>
+//                   <StatNumber fontSize="2xl">12</StatNumber>
+//                 </Stat>
+//                 <IconButton
+//                   icon={<ArrowForwardIcon />} aria-label="Next Steps"
+//                   variant="ghost" colorScheme="teal" size="sm"
+//                 />
+//               </Box>
+//             </Box>
+
+//             <Box>
+//               <Heading fontSize="4xl" mb={1}>19.4 <Text as="span" fontSize="lg">y/o</Text></Heading>
+//               <Text fontSize="sm" color={subText}>3 years younger than average survivor</Text>
+//             </Box>
+//           </Flex>
+//         </MotionBox>
+//       </Flex>
+//     </Box>
+//   );
+// }
